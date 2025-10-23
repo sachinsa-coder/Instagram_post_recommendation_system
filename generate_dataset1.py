@@ -1,0 +1,29 @@
+import csv
+rows = [
+    [1,101,"#travel #nature #adventure #photography",420,32],
+    [1,102,"#travel #nature #adventure #photography",180,21],
+    [2,103,"#travel #food #culture",250,19],
+    [2,104,"#travel #food #culture",340,27],
+    [3,105,"#fitness #health #wellness",220,18],
+    [3,106,"#fitness #health #wellness",180,14],
+    [4,107,"#art #creativity #design",150,8],
+    [4,104,"#art #creativity #design",210,15],
+    [5,108,"#tech #innovation #future",470,31],
+    [5,101,"#tech #innovation #future",360,26],
+    [6,102,"#music #art #creativity",240,18],
+    [6,107,"#music #art #creativity",260,22],
+    [7,108,"#fitness #motivation #energy",230,17],
+    [7,103,"#fitness #motivation #energy",200,15],
+    [8,105,"#food #travel #culture",300,24],
+    [8,102,"#food #travel #culture",270,21],
+    [9,106,"#nature #adventure #photography",310,25],
+    [9,101,"#nature #adventure #photography",280,23],
+    [10,107,"#music #motivation #energy",330,24],
+    [10,108,"#music #motivation #energy",290,20]
+]
+filename = "instagram_demo_graph.csv"
+with open(filename, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["post_id","user_id","hashtags","likes","comments"])
+    writer.writerows(rows)
+print(f"{filename} generated successfully!")
